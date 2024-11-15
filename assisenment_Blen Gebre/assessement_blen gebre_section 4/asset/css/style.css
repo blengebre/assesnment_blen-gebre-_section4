@@ -1,0 +1,149 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f5f5f5; /* Optional: Set a background for the body */ 
+} 
+ 
+nav { 
+    margin: 0; /* Ensure no margin on the nav */ 
+} 
+ 
+nav ul { 
+    display: flex; /* Use flexbox for horizontal layout */ 
+    justify-content: center; /* Center the items in the nav */ 
+    padding: 0; /* Remove default padding */ 
+    margin: 0; /* Remove default margin */ 
+} 
+nav ul li :hover{
+    background-color: hsla(0, 0%, 80%, 0.847);
+    border-radius: 5px;
+    border: 10px;
+}
+ 
+nav ul li { 
+    list-style: none; /* Remove bullet points */ 
+    margin: 0 5px; /* Add spacing between the links */ 
+} 
+ 
+nav ul li a { 
+    color: #4caf50; /* Text color */ 
+    text-decoration: none; /* Remove underline */ 
+    display: block; /* Use a block display for clickable area */ 
+    text-align: center; /* Center text within the link */ 
+    padding: 10px; 
+    padding-top: 10px; 
+} 
+ 
+header h1 { 
+    background-color:#d9eed9; 
+    text-align: center; 
+    padding: 20px; 
+    margin: 0; /* Remove margin to eliminate gap */ 
+} 
+ 
+main { 
+    padding: 40px 20px; /* Adjust padding for smaller screens */ 
+} 
+ 
+.product-container{ 
+    display: flex; 
+    justify-content: center; /* Center horizontally */ 
+    align-items: center; /* Center vertically */ 
+    min-height: calc(100vh - 100px); /* Adjust to fit within the viewport height */ 
+} 
+ 
+.product-list { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */ 
+    gap: 5px; /* Set the gap between items to 5px */ 
+    padding: 25px; /* Padding around the grid */ 
+    justify-items: center; /* Center the grid items */ 
+} 
+ 
+/* Product cards */ 
+.product { 
+    background-color: #fff; /* Background for product box */ 
+    border-radius: 8px; /* Make corners rounded */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */ 
+    display: flex; /* Use flexbox */ 
+    flex-direction: column; /* Stack children vertically */ 
+    align-items: center; /* Center items horizontally */ 
+    justify-content: flex-start; /* Start from the top of the card */ 
+    padding: 15px; /* Padding inside the product box */ 
+    height: auto; /* Allow product box height to adjust */ 
+    max-width: 250px; /* Set max width for product box */ 
+    width: 100%; /* Make width responsive */ 
+    text-align: center; /* Center text */ 
+} 
+ 
+/* Responsive images */ 
+.product img { 
+    width: 100%; /* Make the image take 100% of the width of the product box */ 
+    height: 200px; /* Height for images */ 
+    object-fit: cover; /* Ensure images cover the space without stretching */ 
+    border-radius: 8px; /* Rounded corners for images */ 
+    margin-bottom: 10px; /* Space below the image */ 
+} 
+ 
+/* Heading styling */ 
+.product h2 { 
+    margin: 10px 0; /* Margin above and below h2 for spacing */ 
+    font-size: 1.2em; /* Font size for heading */ 
+    flex-grow: 1; /* Allow the heading to take space */ 
+    padding: 0 15px; /* Add horizontal padding to align with the content */ 
+} 
+ 
+/* Price styling */ 
+.price { 
+    margin-top: 5px; /* Space between the heading and price */ 
+    font-size: 1.5em; /* Larger font size for price */ 
+    color: #11f037; /* Darker color for the price */ 
+} 
+ 
+footer { 
+    text-align: center; 
+    padding: 20px; 
+    background-color: green; /* Background for footer */ 
+    border-top: 1px solid #ccc; /* Add a top border */ 
+} 
+footer p{
+    color: white;
+}
+ 
+/* Responsive styles */ 
+@media (max-width: 768px) { 
+    nav ul { 
+        flex-direction: column; /* Stack the nav items vertically */ 
+    } 
+ 
+    nav ul li { 
+        margin: 10px 0; /* Add space between the nav links */ 
+    } 
+ 
+    main { 
+        padding: 40px 15px; /* Reduce padding for smaller screens */ 
+    } 
+} 
+ 
+@media (max-width: 480px) { 
+    h1 { 
+        font-size: 1.5em; /* Reduce heading size */ 
+    } 
+ 
+    .price { 
+        font-size: 1.2em; /* Adjust price font size */ 
+    } 
+ 
+    .product h2 { 
+        font-size: 1em; /* Reduce product title size */ 
+    } 
+ 
+    nav ul li { 
+        margin: 5px 0; /* Adjust margin between nav items */ 
+    } 
+}
